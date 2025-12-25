@@ -1,5 +1,6 @@
 package com.vamanproject2.ecom.filters;
 
+import com.vamanproject2.ecom.sevices.jwt.UserDetailsServiceImlp;
 import com.vamanproject2.ecom.utils.JWTutil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -20,7 +21,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JWTrequestfilter extends OncePerRequestFilter {
 
-    private final UserDetailsServiceImpl userDetailsService;
+    private final UserDetailsServiceImlp userDetailsService;
 
     private final JWTutil jwtUtil;
 
